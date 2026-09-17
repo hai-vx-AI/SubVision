@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 LANGUAGE MODEL TRANSLATION
 ==========================
@@ -935,11 +936,16 @@ IMPORTANT RULES
 
 from __future__ import annotations
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .config import (
     DEFAULT_LANGUAGE_TRANSLATION_CONFIG,
     LanguageTranslationConfig,
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .model import (
     LanguageModelLoadError,
     LanguageTranslationError,
@@ -953,14 +959,22 @@ from .model import (
 __all__ = [
     # Main API
     "LanguageTranslator",
+<<<<<<< HEAD
+=======
+    "LanguageTranslationConfig",
+    "DEFAULT_LANGUAGE_TRANSLATION_CONFIG",
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 
     # Result
     "LanguageTranslationResult",
 
+<<<<<<< HEAD
     # Config
     "LanguageTranslationConfig",
     "DEFAULT_LANGUAGE_TRANSLATION_CONFIG",
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
     # Errors
     "LanguageTranslationError",
     "LanguageModelLoadError",

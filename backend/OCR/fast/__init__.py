@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 FAST OCR
 ========
@@ -586,6 +587,9 @@ from .config import (
     FastOCRConfig,
 )
 
+=======
+from .config import DEFAULT_FAST_OCR_CONFIG, FastOCRConfig
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .model import (
     FastOCR,
     FastOCRInferenceError,
@@ -593,7 +597,10 @@ from .model import (
     FastOCRInputError,
 )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 __all__ = [
     "FastOCR",
     "FastOCRConfig",

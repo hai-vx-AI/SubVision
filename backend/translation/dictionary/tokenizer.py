@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+<<<<<<< HEAD
 
 from dataclasses import dataclass
 from typing import Literal
@@ -74,6 +75,19 @@ class TokenizerConfig:
 DEFAULT_TOKENIZER_CONFIG = (
     TokenizerConfig()
 )
+=======
+from simplemma import lemmatize
+from dataclasses import dataclass
+from typing import Literal
+
+from .config import (
+    DEFAULT_DICTIONARY_TRANSLATION_CONFIG,
+    DictionaryTranslationConfig,
+)
+
+
+TokenType = Literal["word", "number"]
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 
 
 class DictionaryTokenizerError(RuntimeError):
@@ -139,10 +153,13 @@ class DictionaryToken:
     def is_number(self) -> bool:
         return self.token_type == "number"
 
+<<<<<<< HEAD
     @property
     def is_email(self) -> bool:
         return self.token_type == "email"
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 
 class DictionaryTokenizer:
     """
@@ -163,6 +180,7 @@ class DictionaryTokenizer:
         - kiểm tra ngữ nghĩa.
     """
 
+<<<<<<< HEAD
     # Email phổ biến.
     #
     # Ví dụ:
@@ -181,6 +199,8 @@ class DictionaryTokenizer:
         r"[A-Za-z]{2,}"
     )
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
     # [^\W\d_] nghĩa là một ký tự chữ Unicode:
     #     A-Z, a-z, é, ü...
     #
@@ -205,8 +225,12 @@ class DictionaryTokenizer:
     )
 
     TOKEN_PATTERN = re.compile(
+<<<<<<< HEAD
         rf"(?P<email>{EMAIL_PATTERN})"
         rf"|(?P<word>{WORD_PATTERN})"
+=======
+        rf"(?P<word>{WORD_PATTERN})"
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
         rf"|(?P<number>{NUMBER_PATTERN})",
         flags=re.UNICODE,
     )
@@ -233,12 +257,20 @@ class DictionaryTokenizer:
 
     def __init__(
         self,
+<<<<<<< HEAD
         config: TokenizerConfig | None = None,
     ) -> None:
 
         self.config = (
             config
             or DEFAULT_TOKENIZER_CONFIG
+=======
+        config: DictionaryTranslationConfig | None = None,
+    ) -> None:
+        self.config = (
+            config
+            or DEFAULT_DICTIONARY_TRANSLATION_CONFIG
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
         )
 
     def tokenize(
@@ -294,9 +326,13 @@ class DictionaryTokenizer:
 
             normalized = self.normalize_token(
                 original,
+<<<<<<< HEAD
                 apply_lemma=(
                     token_type == "word"
                 ),
+=======
+                apply_lemma=(token_type == "word"),
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
             )
 
             tokens.append(
@@ -496,9 +532,12 @@ class DictionaryTokenizer:
     def _get_token_type(
         match: re.Match[str],
     ) -> TokenType:
+<<<<<<< HEAD
         if match.lastgroup == "email":
             return "email"
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
         if match.lastgroup == "number":
             return "number"
 

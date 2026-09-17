@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 OCR CORRECTION
 ==============
@@ -1013,11 +1014,16 @@ IMPORTANT RULES
 
 from __future__ import annotations
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .config import (
     DEFAULT_OCR_CORRECTION_CONFIG,
     OCRCorrectionConfig,
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .corrector import (
     OCRCorrectionError,
     OCRCorrectionInputError,
@@ -1025,7 +1031,10 @@ from .corrector import (
     OCRCorrector,
     TokenCorrection,
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .vocabulary import (
     OCRVocabulary,
     VocabularyCandidate,
@@ -1034,6 +1043,7 @@ from .vocabulary import (
     VocabularyLoadError,
 )
 
+<<<<<<< HEAD
 
 __all__ = [
     # Main API
@@ -1044,6 +1054,15 @@ __all__ = [
     "DEFAULT_OCR_CORRECTION_CONFIG",
 
     # Results
+=======
+__all__ = [
+    # Main API
+    "OCRCorrector",
+    "OCRCorrectionConfig",
+    "DEFAULT_OCR_CORRECTION_CONFIG",
+
+    # Correction results
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
     "OCRCorrectionResult",
     "TokenCorrection",
 

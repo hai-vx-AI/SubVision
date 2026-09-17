@@ -85,6 +85,10 @@ class QualityOCR:
 
                 # Runtime
                 device=device,
+<<<<<<< HEAD
+=======
+                engine=self.config.engine,
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
                 enable_mkldnn=self.config.enable_mkldnn,
                 cpu_threads=self.config.cpu_threads,
 

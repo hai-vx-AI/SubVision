@@ -1,1 +1,27 @@
+# Môi trường ảo (Virtual Environments)
 .venv/
+venv/
+env/
+
+# File tạm và bộ nhớ đệm của Python (Cache)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# File cấu hình biến môi trường (Chứa mật khẩu, API keys nếu có)
+.env
+
+# Lịch sử và Log
+*.log
+
+# Cấu hình của trình soạn thảo VS Code
+.vscode/
+
+# Nếu SubVision có tải các trọng số model AI nặng (PaddleOCR, MarianMT...)
+# Bạn có thể chặn các đuôi file model để không đẩy nhầm lên GitHub
+*.pt
+*.pth
+*.bin
+*.onnx
+*.pdparams
+*.pdmodel

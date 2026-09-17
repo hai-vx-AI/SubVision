@@ -5,6 +5,10 @@ from dataclasses import dataclass, field
 from typing import Literal
 
 
+<<<<<<< HEAD
+=======
+EngineName = Literal["paddle_static"]
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 LimitType = Literal["max", "min"]
 DeviceName = Literal["auto", "cpu", "gpu"]
 
@@ -38,6 +42,10 @@ class FastOCRConfig:
     # ==========================================================
 
     device: DeviceName = "auto"
+<<<<<<< HEAD
+=======
+    engine: EngineName = "paddle_static"
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 
     enable_mkldnn: bool = False
     cpu_threads: int = field(default_factory=_default_cpu_threads)
@@ -108,6 +116,15 @@ class FastOCRConfig:
                 "device must be 'auto', 'cpu', or 'gpu'."
             )
 
+<<<<<<< HEAD
+=======
+        if self.engine != "paddle_static":
+            raise ValueError(
+                "FastOCRConfig currently supports "
+                "engine='paddle_static' only."
+            )
+
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
         if self.cpu_threads < 1:
             raise ValueError(
                 "cpu_threads must be at least 1."

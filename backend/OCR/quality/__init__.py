@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 QUALITY OCR
 ===========
@@ -599,11 +600,16 @@ IMPORTANT RULES
 
 from __future__ import annotations
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .config import (
     DEFAULT_QUALITY_OCR_CONFIG,
     QualityOCRConfig,
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 from .model import (
     QualityOCR,
     QualityOCRInferenceError,
@@ -611,7 +617,10 @@ from .model import (
     QualityOCRInputError,
 )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 __all__ = [
     "QualityOCR",
     "QualityOCRConfig",

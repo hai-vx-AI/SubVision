@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 DICTIONARY CORE
 ===============
@@ -1192,18 +1193,50 @@ from __future__ import annotations
 
 from .tokenizer import (
     DEFAULT_TOKENIZER_CONFIG,
+=======
+from .config import (
+    DEFAULT_DICTIONARY_TRANSLATION_CONFIG,
+    DictionaryTranslationConfig,
+)
+from .phrase_trie import (
+    PhraseEntry,
+    PhraseMatch,
+    PhraseTrie,
+    PhraseTrieError,
+    PhraseTrieInputError,
+)
+from .tokenizer import (
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
     DictionaryToken,
     DictionaryTokenizer,
     DictionaryTokenizerError,
     DictionaryTokenizerInputError,
+<<<<<<< HEAD
     TokenizerConfig,
     TokenType,
     UnicodeNormalization,
+=======
+)
+from .translator import (
+    DictionaryTranslationItem,
+    DictionaryTranslationResult,
+    DictionaryTranslator,
+    DictionaryTranslatorError,
+    DictionaryTranslatorInputError,
+)
+from .vocabulary import (
+    DictionaryVocabulary,
+    DictionaryVocabularyError,
+    DictionaryVocabularyInputError,
+    DictionaryVocabularyLoadError,
+    WordEntry,
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 )
 
 
 __all__ = [
     # Main API
+<<<<<<< HEAD
     "DictionaryTokenizer",
 
     # Result model
@@ -1220,4 +1253,43 @@ __all__ = [
     # Errors
     "DictionaryTokenizerError",
     "DictionaryTokenizerInputError",
+=======
+    "DictionaryTranslator",
+    "DictionaryTranslationConfig",
+    "DEFAULT_DICTIONARY_TRANSLATION_CONFIG",
+
+    # Translation results
+    "DictionaryTranslationResult",
+    "DictionaryTranslationItem",
+
+    # Tokenizer
+    "DictionaryTokenizer",
+    "DictionaryToken",
+
+    # Word vocabulary
+    "DictionaryVocabulary",
+    "WordEntry",
+
+    # Phrase Trie
+    "PhraseTrie",
+    "PhraseEntry",
+    "PhraseMatch",
+
+    # Translator errors
+    "DictionaryTranslatorError",
+    "DictionaryTranslatorInputError",
+
+    # Tokenizer errors
+    "DictionaryTokenizerError",
+    "DictionaryTokenizerInputError",
+
+    # Vocabulary errors
+    "DictionaryVocabularyError",
+    "DictionaryVocabularyInputError",
+    "DictionaryVocabularyLoadError",
+
+    # Phrase Trie errors
+    "PhraseTrieError",
+    "PhraseTrieInputError",
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 ]

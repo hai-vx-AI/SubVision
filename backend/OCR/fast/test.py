@@ -242,5 +242,11 @@ if __name__ == "__main__":
     main()
 
 '''
+<<<<<<< HEAD
 python -m backend.OCR.fast.test --image "images/image.png" --output "outputs/fast_ocr_test"
+=======
+python -m backend.OCR.fast.test `
+    --image "D:\.vscode\SubVision\images\image.png" `
+    --output "outputs\fast_ocr_test"
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
 '''

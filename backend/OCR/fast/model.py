@@ -65,6 +65,10 @@ class FastOCR:
 
         try:
             return PaddleOCR(
+<<<<<<< HEAD
+=======
+                # Pretrained models
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
                 text_detection_model_name=(
                     self.config.detection_model_name
                 ),
@@ -72,6 +76,7 @@ class FastOCR:
                     self.config.recognition_model_name
                 ),
 
+<<<<<<< HEAD
                 device=(
                     None
                     if self.config.device == "auto"
@@ -80,6 +85,15 @@ class FastOCR:
                 enable_mkldnn=self.config.enable_mkldnn,
                 cpu_threads=self.config.cpu_threads,
 
+=======
+                # Runtime
+                device = None if self.config.device == "auto" else self.config.device,
+                engine=self.config.engine,
+                enable_mkldnn=self.config.enable_mkldnn,
+                cpu_threads=self.config.cpu_threads,
+
+                # Không dùng các module phụ
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
                 use_doc_orientation_classify=(
                     self.config.use_doc_orientation_classify
                 ),
@@ -90,6 +104,10 @@ class FastOCR:
                     self.config.use_textline_orientation
                 ),
 
+<<<<<<< HEAD
+=======
+                # Detection
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
                 text_det_limit_side_len=(
                     self.config.text_det_limit_side_len
                 ),
@@ -106,6 +124,10 @@ class FastOCR:
                     self.config.text_det_unclip_ratio
                 ),
 
+<<<<<<< HEAD
+=======
+                # Recognition
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
                 text_recognition_batch_size=(
                     self.config.text_recognition_batch_size
                 ),
@@ -116,10 +138,18 @@ class FastOCR:
 
         except Exception as exc:
             raise FastOCRInitializationError(
+<<<<<<< HEAD
                 "Could not initialize FastOCR.\n"
                 f"Original error: {type(exc).__name__}: {exc}"
             ) from exc
         
+=======
+                "Could not initialize the fast OCR pipeline. "
+                "Check the PaddlePaddle/PaddleOCR installation "
+                "and pretrained-model download access."
+            ) from exc
+
+>>>>>>> 04baa413f449b21a5e77119f3024f4efeb2f3942
     def predict(
         self,
         image: np.ndarray,
